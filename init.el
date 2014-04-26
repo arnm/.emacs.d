@@ -22,12 +22,12 @@
 ;; Install packages if they're missing
 (defun init-install-packages ()
   (packages-install
-   '(magit
-     python-environment
+   '(evil
+     magit
      nyan-mode
+     python-environment
      jedi
      js2-mode
-     evil
      clojure-mode
      cider)))
 
