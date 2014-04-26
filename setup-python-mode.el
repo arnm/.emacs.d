@@ -4,4 +4,3 @@
 (setq jedi:complete-on-dot t)
 
 (provide 'setup-python-mode)
-
