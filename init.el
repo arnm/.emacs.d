@@ -1,8 +1,19 @@
-(add-to-list 'load-path user-emacs-directory)
+;; Add external project to load path
+(setq site-lisp-dir
+      (expand-file-name "site-lisp" user-emacs-directory))
 
-;; Keep emacs custom settings in separate file
+;; Configure load path
+(add-to-list 'load-path user-emacs-directory)
+(add-to-list 'load-path site-lisp-dir)
+
+;; keep custom settings in separate file 
 (setq custom-file (expand-file-name "custom.el" user-emacs-directory))
 (load custom-file)
+
+;; Add external projects to load path
+(dolist (project (directory-files site-lisp-dir t "\\w+"))
+  (when (file-directory-p project)
+    (add-to-list 'load-path project)))
 
 (require 'setup-package)
 
@@ -12,7 +23,7 @@
    '(magit
      jedi
      js2-mode
-     evil-mode
+     evil
      clojure-mode
      cider)))
 
