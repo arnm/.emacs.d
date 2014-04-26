@@ -9,7 +9,7 @@
  ;; If there is more than one, they won't work right.
  '(compilation-message-face (quote default))
  '(custom-enabled-themes (quote (sanityinc-tomorrow-bright)))
- '(custom-safe-themes (quote ("1b8d67b43ff1723960eb5e0cba512a2c7a2ad544ddb2533a90101fd1852b426e" default)))
+ '(custom-safe-themes (quote ("60f04e478dedc16397353fb9f33f0d895ea3dab4f581307fbf0aa2f07e658a40" "bb08c73af94ee74453c90422485b29e5643b73b05e8de029a6909af6a3fb3f58" "06f0b439b62164c6f8f84fdda32b62fb50b6d00e8b01c2208e55543a6337433a" "1b8d67b43ff1723960eb5e0cba512a2c7a2ad544ddb2533a90101fd1852b426e" default)))
  '(highlight-changes-colors (quote ("#D700D7" "#AF87FF")))
  '(highlight-tail-colors (quote (("#303030" . 0) ("#B3EE3A" . 20) ("#AFEEEE" . 30) ("#8DE6F7" . 50) ("#FFF68F" . 60) ("#FFA54F" . 70) ("#FE87F4" . 85) ("#303030" . 100))))
  '(magit-diff-use-overlays nil)
@@ -34,18 +34,15 @@
 
 ;; MELPA
 
-(nyan-mode 1)
-
 (require 'evil)
+(evil-mode 1)
+
 (define-key evil-motion-state-map "j" 'evil-backward-char)
 (define-key evil-motion-state-map ";" 'evil-forward-char)
 (define-key evil-motion-state-map "k" 'evil-next-line)
 (define-key evil-motion-state-map "l" 'evil-previous-line)
-(evil-mode 1)
-
-;; VENDOR
 
 (require 'key-chord)
-(setq key-chord-two-keys-delay 0.5)
+(setq key-chord-two-keys-delay 0.2)
 (key-chord-define evil-insert-state-map "jk" 'evil-normal-state)
 (key-chord-mode 1)
