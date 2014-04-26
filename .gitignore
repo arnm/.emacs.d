@@ -1,2 +1,5 @@
 *~
 *.elc
+#init.el#
+/.python-environments/
+/auto-save-list/

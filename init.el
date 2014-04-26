@@ -34,14 +34,39 @@
 
 ;; MELPA
 
+;; IDO mode
+(require 'ido)
+(ido-mode t)
+(setq ido-everywhere t)
+(setq ido-enable-flex-matching t)
+
+;; magit
+(require 'magit)
+
+;; nyan-mode
 (nyan-mode 1)
 
+;; evil-mode
 (require 'evil)
 (define-key evil-motion-state-map "j" 'evil-backward-char)
 (define-key evil-motion-state-map ";" 'evil-forward-char)
 (define-key evil-motion-state-map "k" 'evil-next-line)
 (define-key evil-motion-state-map "l" 'evil-previous-line)
 (evil-mode 1)
+
+;; auto complete mode
+(require 'auto-complete)
+
+;; Jedi
+(add-hook 'python-mode-hook 'jedi:setup)
+(setq jedi:complete-on-dot t)
+
+;; js2-mode
+(add-hook 'js-mode-hook 'js2-minor-mode)
+
+;; cider clj
+(require 'cider)
+(add-hook 'cider-mode-hook 'cider-turn-on-eldoc-mode)
 
 ;; VENDOR
 
