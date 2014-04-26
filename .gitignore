@@ -1,5 +1,6 @@
 *~
 *.elc
+*.dat
 #init.el#
 /elpa/
 /.python-environments/
