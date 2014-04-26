@@ -21,6 +21,8 @@
 (defun init-install-packages ()
   (packages-install
    '(magit
+     python-environment
+     nyan-mode
      jedi
      js2-mode
      evil
