@@ -1,0 +1,3 @@
+[submodule "vendor/dash.el"]
+	path = vendor/dash.el
+	url = https://github.com/magnars/dash.el
