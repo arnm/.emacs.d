@@ -1,7 +1,3 @@
-(add-to-list 'load-path "~/.emacs.d/vendor")
-
-(package-initialize)
-
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -13,6 +9,7 @@
  '(highlight-changes-colors (quote ("#D700D7" "#AF87FF")))
  '(highlight-tail-colors (quote (("#303030" . 0) ("#B3EE3A" . 20) ("#AFEEEE" . 30) ("#8DE6F7" . 50) ("#FFF68F" . 60) ("#FFA54F" . 70) ("#FE87F4" . 85) ("#303030" . 100))))
  '(magit-diff-use-overlays nil)
+ '(magit-use-overlays nil)
  '(menu-bar-mode nil)
  '(package-archives (quote (("gnu" . "http://elpa.gnu.org/packages/") ("melpa" . "http://melpa.milkbox.net/packages/"))))
  '(scroll-bar-mode nil)
@@ -30,33 +27,5 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- ;; VENDOR
+ '(default ((t (:inherit nil :stipple nil :background "#000000" :foreground "#eaeaea" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 180 :width normal :foundry "apple" :family "Monaco")))))
 
-(require 'key-chord)
-(setq key-chord-two-keys-delay 0.5)
-(key-chord-define evil-insert-state-map "jk" 'evil-normal-state)
-(key-chord-mode 1)
-
-;; MELPA
-
-;; IDO mode
-(require 'ido)
-(ido-mode t)
-(setq ido-enable-flex-matching t)
-
-;; magit
-(require 'magit)
-
-;; nyan-mode
-(nyan-mode 1)
-
-;; evil-mode
-(require 'evil)
-(define-key evil-motion-state-map "j" 'evil-backward-char)
-(define-key evil-motion-state-map ";" 'evil-forward-char)
-(define-key evil-motion-state-map "k" 'evil-next-line)
-(define-key evil-motion-state-map "l" 'evil-previous-line)
-(evil-mode 1)
-
-;; auto complete mode
-(require 'auto-complete)

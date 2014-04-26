@@ -1,5 +1,6 @@
 *~
 *.elc
 #init.el#
+/elpa/
 /.python-environments/
 /auto-save-list/
