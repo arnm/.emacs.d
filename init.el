@@ -1,3 +1,5 @@
+(setenv "PATH" (concat "/usr/local/bin:" (getenv "PATH")))
+
 ;; Add external project to load path
 (setq site-lisp-dir
       (expand-file-name "site-lisp" user-emacs-directory))
@@ -6,7 +8,7 @@
 (add-to-list 'load-path user-emacs-directory)
 (add-to-list 'load-path site-lisp-dir)
 
-;; keep custom settings in separate file 
+;; keep custom settings in separate file
 (setq custom-file (expand-file-name "custom.el" user-emacs-directory))
 (load custom-file)
 
@@ -22,7 +24,8 @@
 ;; Install packages if they're missing
 (defun init-install-packages ()
   (packages-install
-   '(evil
+   '(color-theme-sanityinc-tomorrow
+     evil
      magit
      nyan-mode
      python-environment
@@ -39,14 +42,14 @@
 
 ;; System setup
 (nyan-mode 1)
-(require 'auto-complete)
-(require 'setup-ido-mode)
 (require 'setup-evil-mode)
+(require 'setup-ido-mode)
+(require 'setup-auto-complete-mode)
+(eval-after-load 'magit '(require 'setup-magit))
 
 ;; Language specific setups
-(eval-after-load 'js2-mode '(require 'setup-js2-mode))
-(eval-after-load 'python-mode '(require 'setup-python-mode))
-(eval-after-load 'clojure-mode '(require 'setup-clojure-mode))
-(eval-after-load 'magit '(require 'setup-magit))
+(require 'setup-python-mode)
+(require 'setup-clojure-mode)
+(require 'setup-js2-mode)
 
 (require 'key-bindings)
