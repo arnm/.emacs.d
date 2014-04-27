@@ -34,6 +34,7 @@
      nyan-mode
      python-environment
      jedi
+     emmet-mode
      js2-mode
      js2-refactor
      clojure-mode
