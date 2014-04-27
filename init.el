@@ -24,8 +24,9 @@
 ;; Install packages if they're missing
 (defun init-install-packages ()
   (packages-install
-   '(monokai-theme
+   '(color-theme-sanityinc-tomorrow
      evil
+     evil-leader
      magit
      nyan-mode
      python-environment
@@ -51,5 +52,3 @@
 (require 'setup-python-mode)
 (require 'setup-clojure-mode)
 (require 'setup-js2-mode)
-
-(require 'key-bindings)
