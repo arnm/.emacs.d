@@ -12,8 +12,6 @@
 (setq custom-file (expand-file-name "custom.el" user-emacs-directory))
 (load custom-file)
 
-(require 'appearance)
-
 ;; Add external projects to load path
 (dolist (project (directory-files site-lisp-dir t "\\w+"))
   (when (file-directory-p project)
@@ -21,10 +19,12 @@
 
 (require 'setup-package)
 
+(require 'appearance)
+
 ;; Install packages if they're missing
 (defun init-install-packages ()
   (packages-install
-   '(color-theme-sanityinc-tomorrow
+   '(monokai-theme
      evil
      magit
      nyan-mode
