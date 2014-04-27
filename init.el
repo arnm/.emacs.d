@@ -1,4 +1,6 @@
+;; path setup
 (setenv "PATH" (concat "/usr/local/bin:" (getenv "PATH")))
+(setq default-directory (concat (getenv "HOME") "/"))
 
 ;; Add external project to load path
 (setq site-lisp-dir
@@ -27,11 +29,13 @@
    '(color-theme-sanityinc-tomorrow
      evil
      evil-leader
+     yasnippet
      magit
      nyan-mode
      python-environment
      jedi
      js2-mode
+     js2-refactor
      clojure-mode
      cider)))
 
@@ -42,7 +46,7 @@
    (init-install-packages)))
 
 ;; System setup
-(nyan-mode 1)
+(require 'setup-nyan-mode)
 (require 'setup-evil-mode)
 (require 'setup-ido-mode)
 (require 'setup-auto-complete-mode)
@@ -51,4 +55,5 @@
 ;; Language specific setups
 (require 'setup-python-mode)
 (require 'setup-clojure-mode)
+(require 'setup-emmet-mode)
 (require 'setup-js2-mode)
