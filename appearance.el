@@ -1,3 +1,7 @@
+;; empty scratch buffer on start up
+(setf inhibit-splash-screen t)
+(switch-to-buffer (get-buffer-create "*scratch*"))
+(delete-other-windows)
 
 ;; theme
 (load-theme 'sanityinc-tomorrow-bright)
