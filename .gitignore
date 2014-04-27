@@ -6,4 +6,4 @@
 /.python-environments/
 /auto-save-list/
 *.tern-port
-*.el
+custom.el
