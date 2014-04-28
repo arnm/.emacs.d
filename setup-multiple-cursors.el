@@ -15,6 +15,10 @@
         evil-emacs-state
         evil-end-of-line
         evil-force-normal-state
+	evil-forward-char
+	evil-backward-char
+	evil-next-line
+	evil-previous-line
         evil-forward-WORD-begin
         evil-forward-WORD-end
         evil-forward-word-begin
