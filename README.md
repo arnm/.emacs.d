@@ -6,5 +6,5 @@ I was originally a Vim user before switching to Emacs. I still use Vim on and of
 
 The setup is simple and automatic.
 
-1. Run the setup script ~/.emacs.d/setup.sh
+1. Run the setup script `~/.emacs.d/setup.sh`
 2. Run Emacs!
