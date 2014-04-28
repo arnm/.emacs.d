@@ -4,6 +4,6 @@ npm install
 
 echo "Download default custom.el"
 cd ~/.emacs.d/
-wget https://raw.githubusercontent.com/arnm/emacs.d/6864f27f5f7e1c1be1b0382fd2f7e32b8d3306bc/custom.el
+wget https://gist.githubusercontent.com/arnm/11359580/raw/75ea6208a545a3af500df42aaf00117147d9c60a/custom.el
 
 echo "Setup complete"
