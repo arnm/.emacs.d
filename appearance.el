@@ -1,3 +1,7 @@
+;; keep custom settings in separate file
+(setq custom-file (expand-file-name "custom.el" user-emacs-directory))
+(load custom-file)
+
 ;; empty scratch buffer on start up
 (setf inhibit-splash-screen t)
 (switch-to-buffer (get-buffer-create "*scratch*"))
@@ -9,9 +13,5 @@
 (load-theme 'sanityinc-tomorrow-bright)
 (show-paren-mode 1)
 (global-hl-line-mode 1)
-
-;; keep custom settings in separate file
-(setq custom-file (expand-file-name "custom.el" user-emacs-directory))
-(load custom-file)
 
 (provide 'appearance)
