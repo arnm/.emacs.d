@@ -10,4 +10,8 @@
 (show-paren-mode 1)
 (global-hl-line-mode 1)
 
+;; keep custom settings in separate file
+(setq custom-file (expand-file-name "custom.el" user-emacs-directory))
+(load custom-file)
+
 (provide 'appearance)

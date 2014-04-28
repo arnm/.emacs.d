@@ -10,18 +10,12 @@
 (add-to-list 'load-path user-emacs-directory)
 (add-to-list 'load-path site-lisp-dir)
 
-;; keep custom settings in separate file
-(setq custom-file (expand-file-name "custom.el" user-emacs-directory))
-(load custom-file)
-
 ;; Add external projects to load path
 (dolist (project (directory-files site-lisp-dir t "\\w+"))
   (when (file-directory-p project)
     (add-to-list 'load-path project)))
 
 (require 'setup-package)
-
-(require 'appearance)
 
 ;; Install packages if they're missing
 (defun init-install-packages ()
@@ -47,6 +41,8 @@
    (package-refresh-contents)
    (init-install-packages)))
 
+(require 'appearance)
+
 ;; System setup
 (require 'setup-nyan-mode)
 (require 'setup-evil-mode)
@@ -60,3 +56,4 @@
 (require 'setup-emmet-mode)
 (require 'setup-python-mode)
 (require 'setup-clojure-mode)
+
