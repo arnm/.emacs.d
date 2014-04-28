@@ -29,6 +29,7 @@
    '(color-theme-sanityinc-tomorrow
      evil
      evil-leader
+     multiple-cursors
      yasnippet
      magit
      nyan-mode
@@ -50,11 +51,12 @@
 (require 'setup-nyan-mode)
 (require 'setup-evil-mode)
 (require 'setup-ido-mode)
+(require 'setup-multiple-cursors)
 (require 'setup-auto-complete-mode)
 (eval-after-load 'magit '(require 'setup-magit))
 
 ;; Language specific setups
+(require 'setup-js2-mode)
+(require 'setup-emmet-mode)
 (require 'setup-python-mode)
 (require 'setup-clojure-mode)
-(require 'setup-emmet-mode)
-(require 'setup-js2-mode)

@@ -3,13 +3,11 @@
 (switch-to-buffer (get-buffer-create "*scratch*"))
 (delete-other-windows)
 
-;; theme
+;; disable stupid bell noise
+(setq ring-bell-function 'ignore)
+
 (load-theme 'sanityinc-tomorrow-bright)
-
-;; Highlight matching parentheses when the point is on them.
 (show-paren-mode 1)
-
-;; Highlight current line
-;; (global-hl-line-mode 1)
+(global-hl-line-mode 1)
 
 (provide 'appearance)
