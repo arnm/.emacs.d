@@ -12,7 +12,8 @@
   "s" 'split-window-vertically
   "e" 'kill-buffer
   "d" 'delete-window
-  "q" 'save-buffers-kill-terminal)
+  "q" 'save-buffers-kill-terminal
+)
 
 (require 'evil)
 
