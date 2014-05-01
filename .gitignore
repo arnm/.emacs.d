@@ -10,3 +10,4 @@ custom.el
 *.#*.el
 *.el#
 *.mc*.el
+*.eld

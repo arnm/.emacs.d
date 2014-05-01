@@ -38,12 +38,25 @@
 (define-key evil-normal-state-map (kbd "C-l") 'evil-window-up)
 (define-key evil-normal-state-map (kbd "C-;") 'evil-window-right)
 
+;; Projectile
+
+;; find-file
+(define-key evil-normal-state-map (kbd "C-p") 'projectile-find-file)
+(define-key evil-insert-state-map (kbd "C-p") 'projectile-find-file)
+(define-key evil-visual-state-map (kbd "C-p") 'projectile-find-file)
+
+;; fild-project
+(define-key evil-normal-state-map (kbd "C-s") 'projectile-switch-project)
+(define-key evil-insert-state-map (kbd "C-s") 'projectile-switch-project)
+(define-key evil-visual-state-map (kbd "C-s") 'projectile-switch-project)
+
 (require 'key-chord)
 
 (setq key-chord-two-keys-delay 0.1)
 
 ;; State Change Keys
 (key-chord-define evil-insert-state-map "jk" 'evil-normal-state)
+(key-chord-define evil-insert-state-map "kj" 'evil-normal-state)
 
 (global-evil-leader-mode)
 (evil-mode 1)

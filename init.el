@@ -23,6 +23,7 @@
    '(color-theme-sanityinc-tomorrow
      evil
      evil-leader
+     projectile
      multiple-cursors
      yasnippet
      magit
@@ -44,6 +45,7 @@
 (require 'appearance)
 
 ;; System setup
+(require 'setup-projectile-mode)
 (require 'setup-nyan-mode)
 (require 'setup-evil-mode)
 (require 'setup-ido-mode)
@@ -56,4 +58,3 @@
 (require 'setup-emmet-mode)
 (require 'setup-python-mode)
 (require 'setup-clojure-mode)
-
