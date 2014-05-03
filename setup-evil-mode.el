@@ -4,6 +4,12 @@
 
 ;; <leader> bindings
 (evil-leader/set-key
+  ;; projectile
+  "p f" 'projectile-find-file
+  "p s" 'projectile-switch-project
+  "p c" 'projectile-run-shell-command-in-root
+
+  ;; global
   "f" 'find-file
   "w" 'save-buffer
   "n" 'write-file
@@ -37,18 +43,6 @@
 (define-key evil-normal-state-map (kbd "C-k") 'evil-window-down)
 (define-key evil-normal-state-map (kbd "C-l") 'evil-window-up)
 (define-key evil-normal-state-map (kbd "C-;") 'evil-window-right)
-
-;; Projectile
-
-;; find-file
-(define-key evil-normal-state-map (kbd "C-p") 'projectile-find-file)
-(define-key evil-insert-state-map (kbd "C-p") 'projectile-find-file)
-(define-key evil-visual-state-map (kbd "C-p") 'projectile-find-file)
-
-;; fild-project
-(define-key evil-normal-state-map (kbd "C-s") 'projectile-switch-project)
-(define-key evil-insert-state-map (kbd "C-s") 'projectile-switch-project)
-(define-key evil-visual-state-map (kbd "C-s") 'projectile-switch-project)
 
 (require 'key-chord)
 
