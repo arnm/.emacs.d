@@ -1,5 +1,6 @@
 ;; path setup
-(setenv "PATH" (concat "/usr/local/bin:" (getenv "PATH")))
+(setenv "PATH" (getenv "PATH"))
+(setq exec-path '("/usr/local/bin" "/usr/bin"))
 (setq default-directory (concat (getenv "HOME") "/"))
 
 ;; Add external project to load path
@@ -25,6 +26,7 @@
      evil-leader
      projectile
      multiple-cursors
+     paredit
      yasnippet
      magit
      nyan-mode
@@ -49,6 +51,7 @@
 (require 'setup-nyan-mode)
 (require 'setup-evil-mode)
 (require 'setup-ido-mode)
+(require 'setup-paredit)
 (require 'setup-multiple-cursors)
 (require 'setup-auto-complete-mode)
 (eval-after-load 'magit '(require 'setup-magit))
