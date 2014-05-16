@@ -39,10 +39,10 @@
 (define-key evil-motion-state-map "l" 'evil-previous-line)
 
 ;; Window Movement Keys
-(define-key evil-normal-state-map (kbd "C-j") 'evil-window-left)
-(define-key evil-normal-state-map (kbd "C-k") 'evil-window-down)
-(define-key evil-normal-state-map (kbd "C-l") 'evil-window-up)
-(define-key evil-normal-state-map (kbd "C-;") 'evil-window-right)
+(define-key evil-normal-state-map (kbd "M-j") 'evil-window-left)
+(define-key evil-normal-state-map (kbd "M-k") 'evil-window-down)
+(define-key evil-normal-state-map (kbd "M-l") 'evil-window-up)
+(define-key evil-normal-state-map (kbd "M-;") 'evil-window-right)
 
 (require 'key-chord)
 

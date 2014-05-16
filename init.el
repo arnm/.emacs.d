@@ -22,6 +22,7 @@
 (defun init-install-packages ()
   (packages-install
    '(color-theme-sanityinc-tomorrow
+     nyan-mode
      evil
      evil-leader
      projectile
@@ -29,14 +30,15 @@
      paredit
      yasnippet
      magit
-     nyan-mode
+     flycheck
      python-environment
      jedi
      emmet-mode
      js2-mode
      js2-refactor
      clojure-mode
-     cider)))
+     cider
+     rust-mode)))
 
 (condition-case nil
     (init-install-packages)
@@ -61,3 +63,4 @@
 (require 'setup-emmet-mode)
 (require 'setup-python-mode)
 (require 'setup-clojure-mode)
+(require 'setup-rust-mode)
