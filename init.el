@@ -28,9 +28,11 @@
      projectile
      multiple-cursors
      paredit
+     autopair
      yasnippet
      magit
      flycheck
+     emacs-eclim
      python-environment
      jedi
      emmet-mode
@@ -54,6 +56,7 @@
 (require 'setup-evil-mode)
 (require 'setup-ido-mode)
 (require 'setup-paredit)
+(require 'setup-autopair-mode)
 (require 'setup-multiple-cursors)
 (require 'setup-auto-complete-mode)
 (eval-after-load 'magit '(require 'setup-magit))

@@ -38,6 +38,10 @@
 (define-key evil-motion-state-map "k" 'evil-next-line)
 (define-key evil-motion-state-map "l" 'evil-previous-line)
 
+(define-key evil-insert-state-map (kbd "C-a") 'evil-append-line)
+(define-key evil-insert-state-map (kbd "C-i") 'evil-insert-line)
+(define-key evil-insert-state-map (kbd "C-o") 'evil-open-below)
+
 ;; Window Movement Keys
 (define-key evil-normal-state-map (kbd "M-j") 'evil-window-left)
 (define-key evil-normal-state-map (kbd "M-k") 'evil-window-down)
