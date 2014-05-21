@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: mutable let
+# key: mlt
+# --
+let mut $1 = $2;$0

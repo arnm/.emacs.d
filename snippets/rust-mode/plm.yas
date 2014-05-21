@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: println
+# key: plm
+# --
+println!("$1", $2);$0
