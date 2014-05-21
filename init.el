@@ -59,6 +59,7 @@
 (require 'setup-autopair-mode)
 (require 'setup-multiple-cursors)
 (require 'setup-auto-complete-mode)
+(require 'setup-yas-mode)
 (eval-after-load 'magit '(require 'setup-magit))
 
 ;; Language specific setups
