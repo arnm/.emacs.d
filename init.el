@@ -38,24 +38,26 @@
      multiple-cursors
      paredit
      autopair
+     auto-complete
      yasnippet
      magit
      git-gutter
-     flycheck
-     emacs-eclim
-     go-mode
-     company-go
-     python-environment
-     jedi
-     emmet-mode
+     ;flycheck
+     ;emacs-eclim
+     ;go-mode
+     ;company-go
+     ;python-environment
+     ;jedi
+     ;emmet-mode
      markdown-mode
      yaml-mode
-     js2-mode
-     js2-refactor
-     coffee-mode
-     clojure-mode
-     cider
-     rust-mode)))
+     ;js2-mode
+     ;js2-refactor
+     ;coffee-mode
+     ;clojure-mode
+     ;cider
+     ;rust-mode
+     )))
 
 (condition-case nil
     (init-install-packages)
@@ -80,9 +82,10 @@
 (eval-after-load 'magit '(require 'setup-magit))
 
 ;; Language specific setups
-(require 'setup-js2-mode)
-(require 'setup-emmet-mode)
-(require 'setup-python-mode)
-(require 'setup-clojure-mode)
-(require 'setup-rust-mode)
-(require 'setup-go-mode)
+; (require 'setup-js2-mode)
+; (require 'setup-emmet-mode)
+; (require 'setup-python-mode)
+; (require 'setup-clojure-mode)
+; (require 'setup-rust-mode)
+; (require 'setup-go-mode)
+
