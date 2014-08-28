@@ -5,8 +5,7 @@
 (global-set-key (kbd "C-0") 'mc/mark-next-like-this)
 
 (setq mc/cmds-to-run-for-all
-      '(
-        evil-append-line
+      '(evil-append-line
         evil-backward-WORD-begin
         evil-backward-word-begin
         evil-delete-char
@@ -27,8 +26,7 @@
         evil-next-line
         evil-normal-state
         evil-previous-line
-	evil-change
-        ))
+	evil-change))
 
 (multiple-cursors-mode t)
 (provide 'setup-multiple-cursors)

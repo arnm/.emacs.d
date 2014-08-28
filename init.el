@@ -30,8 +30,7 @@
 ;; Install packages if they're missing
 (defun init-install-packages ()
   (packages-install
-   '(color-theme-sanityinc-tomorrow
-     nyan-mode
+   '(nyan-mode
      evil
      evil-leader
      projectile
@@ -89,7 +88,7 @@
 ; (require 'setup-js2-mode)
 ; (require 'setup-emmet-mode)
 ; (require 'setup-python-mode)
-; (require 'setup-clojure-mode)
+(require 'setup-clojure-mode)
 ; (require 'setup-rust-mode)
 ; (require 'setup-go-mode)
 

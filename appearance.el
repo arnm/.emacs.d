@@ -10,7 +10,12 @@
 ;; disable stupid bell noise
 (setq ring-bell-function 'ignore)
 
-(load-theme 'sanityinc-tomorrow-bright)
+; set theme only when GUI is ran
+; use terminal color scheme
+(when (display-graphic-p)
+    (require 'color-theme-tomorrow)
+    (color-theme-tomorrow))
+
 (show-paren-mode 1)
 (global-hl-line-mode 1)
 

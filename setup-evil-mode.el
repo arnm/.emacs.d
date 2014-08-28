@@ -17,8 +17,8 @@
   "b" 'switch-to-buffer
   "v" 'split-window-horizontally
   "s" 'split-window-vertically
-  "c" 'kill-buffer
-  "d" 'delete-window
+  "c" 'kill-this-buffer
+  "d" 'kill-buffer-and-window
   "q" 'save-buffers-kill-terminal
 )
 
