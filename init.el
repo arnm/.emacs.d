@@ -88,7 +88,7 @@
 ; (require 'setup-js2-mode)
 ; (require 'setup-emmet-mode)
 ; (require 'setup-python-mode)
-(require 'setup-clojure-mode)
+; (require 'setup-clojure-mode)
 ; (require 'setup-rust-mode)
 ; (require 'setup-go-mode)
 
