@@ -12,9 +12,9 @@
 
 ; set theme only when GUI is ran
 ; use terminal color scheme
-(when (display-graphic-p)
-    (require 'color-theme-tomorrow)
-    (color-theme-tomorrow))
+(require 'color-theme-tomorrow)
+;(color-theme-tomorrow)
+(color-theme-tomorrow-night)
 
 (show-paren-mode 1)
 (global-hl-line-mode 1)
