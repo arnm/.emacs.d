@@ -9,6 +9,6 @@ sudo make install
 
 echo "Download default custom.el"
 cd ~/.emacs.d/
-wget https://gist.githubusercontent.com/arnm/11359580/raw/75ea6208a545a3af500df42aaf00117147d9c60a/custom.el
+wget https://gist.githubusercontent.com/arnm/11359580/raw/00d81bde6480835a0cdab9301783b81f7123581e/custom.el
 
 echo "Setup complete"
