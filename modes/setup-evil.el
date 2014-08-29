@@ -70,4 +70,4 @@
 (global-evil-leader-mode)
 (evil-mode 1)
 (key-chord-mode 1)
-(provide 'setup-evil-mode)
+(provide 'setup-evil)

@@ -2,4 +2,4 @@
 
 (autopair-global-mode)
 
-(provide 'setup-autopair-mode)
+(provide 'setup-autopair)

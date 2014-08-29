@@ -1,9 +1,9 @@
 (require 'fill-column-indicator)
+(require 'color-theme-tomorrow)
+
 ;; keep custom settings in separate file
 (setq custom-file (expand-file-name "custom.el" user-emacs-directory))
 (load custom-file)
-
-(require 'color-theme-tomorrow)
 
 ;; empty scratch buffer on start up
 (setf inhibit-splash-screen t)
