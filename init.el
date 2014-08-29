@@ -30,11 +30,15 @@
 ;; Install packages if they're missing
 (defun init-install-packages ()
   (packages-install
-   '(nyan-mode
+   '(fill-column-indicator
+     nyan-mode
      evil
      evil-leader
+     key-chord
      projectile
+     dash
      multiple-cursors
+     expand-region
      paredit
      rainbow-delimiters
      autopair
@@ -54,8 +58,8 @@
      ;js2-mode
      ;js2-refactor
      ;coffee-mode
-     ;clojure-mode
-     ;cider
+     clojure-mode
+     cider
      ;rust-mode
      )))
 
@@ -88,7 +92,7 @@
 ; (require 'setup-js2-mode)
 ; (require 'setup-emmet-mode)
 ; (require 'setup-python-mode)
-; (require 'setup-clojure-mode)
+(require 'setup-clojure-mode)
 ; (require 'setup-rust-mode)
 ; (require 'setup-go-mode)
 

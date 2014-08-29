@@ -1,6 +1,9 @@
+(require 'fill-column-indicator)
 ;; keep custom settings in separate file
 (setq custom-file (expand-file-name "custom.el" user-emacs-directory))
 (load custom-file)
+
+(require 'color-theme-tomorrow)
 
 ;; empty scratch buffer on start up
 (setf inhibit-splash-screen t)
@@ -10,12 +13,14 @@
 ;; disable stupid bell noise
 (setq ring-bell-function 'ignore)
 
-; set theme only when GUI is ran
-; use terminal color scheme
-(require 'color-theme-tomorrow)
 ;(color-theme-tomorrow)
-(color-theme-tomorrow-night)
+;(color-theme-tomorrow-night-bright)
+(color-theme-tomorrow-night-eighties)
 
+(define-globalized-minor-mode global-fci-mode
+  fci-mode (lambda () (fci-mode 1)))
+
+(global-fci-mode 1)
 (show-paren-mode 1)
 (global-hl-line-mode 1)
 

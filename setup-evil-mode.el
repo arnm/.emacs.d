@@ -1,4 +1,7 @@
 (require 'evil-leader)
+(require 'evil)
+(require 'key-chord)
+(require 'rxvt)
 
 (evil-leader/set-leader ",")
 
@@ -18,11 +21,9 @@
   "v" 'split-window-horizontally
   "s" 'split-window-vertically
   "c" 'kill-this-buffer
-  "d" 'kill-buffer-and-window
-  "q" 'save-buffers-kill-terminal
-)
-
-(require 'evil)
+  "k" 'kill-buffer
+  "d" 'delete-window
+  "q" 'save-buffers-kill-terminal)
 
 ;; ESC == Quit
 (define-key evil-normal-state-map [escape] 'abort-recursive-edit)
@@ -39,10 +40,11 @@
 (define-key evil-motion-state-map "l" 'evil-previous-line)
 (define-key evil-motion-state-map ";" 'evil-forward-char)
 
-(define-key evil-insert-state-map (kbd "C-j") 'evil-window-left)
-(define-key evil-insert-state-map (kbd "C-k") 'evil-window-down)
-(define-key evil-insert-state-map (kbd "C-l") 'evil-window-up)
-(define-key evil-insert-state-map (kbd "C-;") 'evil-window-right)
+(define-key evil-insert-state-map (kbd "C-j") 'evil-backward-char)
+(define-key evil-insert-state-map (kbd "C-k") 'evil-next-line)
+(define-key evil-insert-state-map (kbd "C-l") 'evil-previous-line)
+(define-key evil-insert-state-map (kbd "C-;") 'evil-forward-char)
+(define-key evil-insert-state-map (kbd "<right>") 'evil-forward-char)
 
 (define-key evil-insert-state-map (kbd "C-a") 'evil-append-line)
 (define-key evil-insert-state-map (kbd "C-i") 'evil-insert-line)
@@ -53,8 +55,11 @@
 (define-key evil-normal-state-map (kbd "C-k") 'evil-window-down)
 (define-key evil-normal-state-map (kbd "C-l") 'evil-window-up)
 (define-key evil-normal-state-map (kbd "C-;") 'evil-window-right)
+(define-key evil-normal-state-map (kbd "<right>") 'evil-window-right)
 
-(require 'key-chord)
+(define-key evil-normal-state-map (kbd "C-v") 'shrink-window-horizontally)
+(global-unset-key (kbd "C-s")) 
+(define-key evil-normal-state-map (kbd "C-s") 'shrink-window)
 
 (setq key-chord-two-keys-delay 0.1)
 
