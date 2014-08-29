@@ -28,15 +28,13 @@
 (require 'setup-package)
 
 ;; Install packages if they're missing
-(defun init-install-packages ()
-  (packages-install
+(packages-install
    '(fill-column-indicator
      nyan-mode
      evil
      evil-leader
      key-chord
      projectile
-     dash
      multiple-cursors
      expand-region
      paredit
@@ -58,16 +56,9 @@
      ;js2-mode
      ;js2-refactor
      ;coffee-mode
-     clojure-mode
-     cider
      ;rust-mode
-     )))
-
-(condition-case nil
-    (init-install-packages)
-  (error
-   (package-refresh-contents)
-   (init-install-packages)))
+     clojure-mode
+     cider))
 
 (require 'appearance)
 (require 'global-key-maps)
