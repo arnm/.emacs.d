@@ -16,11 +16,6 @@
 (add-to-list 'load-path site-lisp)
 (add-to-list 'load-path modes)
 
-;; Put autosave files (ie #foo#) and backup files (ie foo~) in ~/.emacs.d/.
-(custom-set-variables
-  '(auto-save-file-name-transforms '((".*" "~/.emacs.d/autosaves/\\1" t)))
-  '(backup-directory-alist '((".*" . "~/.emacs.d/backups/"))))
-
 ;; Add external projects to load path
 (dolist (project (directory-files site-lisp t "\\w+"))
   (when (file-directory-p project)
@@ -30,51 +25,54 @@
 
 ;; Install packages if they're missing
 (packages-install
-   '(fill-column-indicator
-     nyan-mode
+   '(auto-complete
+     autopair
+     cider
+     clojure-mode
+     ;coffee-mode
+     ;company-go
+     ;emmet-mode
      evil
      evil-leader
-     key-chord
-     projectile
-     multiple-cursors
      expand-region
-     paredit
-     rainbow-delimiters
-     autopair
-     auto-complete
-     yasnippet
-     magit
-     git-gutter
+     fill-column-indicator
      ;flycheck
+     git-gutter
      ;go-mode
-     ;company-go
-     ;python-environment
      ;jedi
-     ;emmet-mode
-     markdown-mode
-     yaml-mode
      ;js2-mode
      ;js2-refactor
-     ;coffee-mode
+     key-chord
+     magit
+     markdown-mode
+     multiple-cursors
+     nyan-mode
+     paredit
+     powerline
+     projectile
+     ;python-environment
+     rainbow-delimiters
      ;rust-mode
-     clojure-mode
-     cider))
+     yaml-mode
+     yasnippet))
 
 (require 'appearance)
 (require 'global-key-maps)
 
 ;; System setup
-(require 'setup-projectile)
-(require 'setup-nyan-mode)
-(require 'setup-evil)
-(require 'setup-ido)
-(require 'setup-paredit)
-(require 'setup-autopair)
-(require 'setup-multiple-cursors)
+
 (require 'setup-auto-complete)
-(require 'setup-yasnippet)
+(require 'setup-autopair)
+(require 'setup-evil)
+(require 'setup-expand-region)
 (require 'setup-git-gutter)
-(eval-after-load 'magit '(require 'setup-magit))
+(require 'setup-ido)
+(require 'setup-magit)
+(require 'setup-multiple-cursors)
+(require 'setup-nyan-mode)
+(require 'setup-paredit)
+(require 'setup-projectile)
+(require 'setup-yasnippet)
 
 ;; Language specific setups
 

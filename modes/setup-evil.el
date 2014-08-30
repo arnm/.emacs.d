@@ -12,6 +12,9 @@
   "p s" 'projectile-switch-project
   "p c" 'projectile-run-shell-command-in-root
 
+  ;; expand-region
+  "r" 'er/expand-region
+
   ;; global
   "e" 'execute-extended-command
   "o" 'find-file
