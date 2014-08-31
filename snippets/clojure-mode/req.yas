@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: require
+# key: req
+# --
+(:require [${1:namespace} :as ${2:name}])$0
