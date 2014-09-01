@@ -29,16 +29,26 @@
   "w" 'save-buffer)
 
 ;; ESC == Quit
-(define-key evil-normal-state-map [escape] 'abort-recursive-edit)
-(define-key evil-visual-state-map [escape] 'abort-recursive-edit)
 (define-key minibuffer-local-map [escape] 'abort-recursive-edit)
 (define-key minibuffer-local-ns-map [escape] 'abort-recursive-edit)
 (define-key minibuffer-local-completion-map [escape] 'abort-recursive-edit)
 (define-key minibuffer-local-must-match-map [escape] 'abort-recursive-edit)
 (define-key minibuffer-local-isearch-map [escape] 'abort-recursive-edit)
 
+(define-key evil-motion-state-map ";" 'evil-forward-char)
+(define-key evil-motion-state-map "j" 'evil-backward-char)
+(define-key evil-motion-state-map "k" 'evil-next-line)
+(define-key evil-motion-state-map "l" 'evil-previous-line)
+
+;;; Insert State
+
 (define-key evil-insert-state-map (kbd "C-a") 'evil-append-line)
 (define-key evil-insert-state-map (kbd "C-i") 'evil-insert-line)
+
+;; State Change Keys
+(define-key evil-insert-state-map (kbd "C-c") 'evil-normal-state)
+(key-chord-define evil-insert-state-map "jk" 'evil-normal-state)
+(key-chord-define evil-insert-state-map "kj" 'evil-normal-state)
 
 ;; Movement Keys
 
@@ -48,11 +58,6 @@
 (define-key evil-insert-state-map (kbd "C-l") 'evil-previous-line)
 (define-key evil-insert-state-map (kbd "C-o") 'evil-open-below)
 (define-key evil-insert-state-map (kbd "<right>") 'evil-forward-char)
-
-(define-key evil-motion-state-map ";" 'evil-forward-char)
-(define-key evil-motion-state-map "j" 'evil-backward-char)
-(define-key evil-motion-state-map "k" 'evil-next-line)
-(define-key evil-motion-state-map "l" 'evil-previous-line)
 
 ;; Window Movement Keys
 
@@ -65,11 +70,10 @@
 (define-key evil-normal-state-map (kbd "C-s") 'shrink-window)
 (define-key evil-normal-state-map (kbd "C-v") 'shrink-window-horizontally)
 
-(setq key-chord-two-keys-delay 0.1)
+;;; Visual State
+(define-key evil-visual-state-map (kbd "C-c") 'evil-normal-state)
 
-;; State Change Keys
-(key-chord-define evil-insert-state-map "jk" 'evil-normal-state)
-(key-chord-define evil-insert-state-map "kj" 'evil-normal-state)
+(setq key-chord-two-keys-delay 0.1)
 
 (global-evil-leader-mode)
 (evil-mode 1)

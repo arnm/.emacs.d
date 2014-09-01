@@ -2,6 +2,9 @@
 
 (global-auto-complete-mode t)
 
+(setq ac-delay 0.0)
+(setq ac-quick-help-delay 0.5)
+
 ;; setup and turn on `auto-complete-mode` for various major modes
 (ac-config-default)
 

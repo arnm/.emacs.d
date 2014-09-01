@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: nsp
+# key: nsp
+# --
+(ns ${1:namespace}
+  ${2:imports})$0
