@@ -7,5 +7,5 @@ I was originally a Vim user before switching to Emacs. I still use Vim on and of
 The setup is simple and automatic.
 
 1. Clone repo `git clone --recursive https://github.com/arnm/emacs.d ~/.emacs.d`
-2. Run the setup script `~/.emacs.d/setup.sh`
+2. Run the setup script `~/.emacs.d/setup`
 3. Run Emacs!
