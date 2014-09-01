@@ -1,7 +1,7 @@
-#!/usr/bin/bash
+#!/bin/sh
 
 echo "Setting up Tern"
-cd ~/.emacs.d/site-lisp/tern
+cd ~/.emacs.d/vendor/tern
 npm install
 
 echo "Download default custom.el"
