@@ -16,6 +16,7 @@
   "r" 'er/expand-region
 
   ;; global
+  "f" 'evil-ace-jump-word-mode
   "b" 'switch-to-buffer
   "c" 'kill-this-buffer
   "d" 'delete-window

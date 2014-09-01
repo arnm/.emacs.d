@@ -26,7 +26,8 @@
 
 ;; Install packages if they're missing
 (packages-install
- '(auto-complete
+ '(ace-jump-mode
+   auto-complete
    autopair
    cider
    clojure-mode
