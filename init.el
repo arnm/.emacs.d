@@ -39,6 +39,7 @@
    expand-region
    fill-column-indicator
    fish-mode
+   flx-ido
    ;;flycheck
    git-gutter
    ;;go-mode
@@ -69,8 +70,8 @@
 (require 'setup-autopair)
 (require 'setup-evil)
 (require 'setup-expand-region)
+(require 'setup-flx-ido)
 (require 'setup-git-gutter)
-(require 'setup-ido)
 (require 'setup-magit)
 (require 'setup-multiple-cursors)
 (require 'setup-nyan-mode)
