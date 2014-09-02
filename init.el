@@ -61,8 +61,9 @@
    yaml-mode
    yasnippet))
 
-(require 'appearance)
-(require 'global-key-maps)
+(require 'setup-custom)
+(require 'setup-apperance)
+(require 'setup-global-bindings)
 
 ;; System setup
 (require 'setup-yasnippet)

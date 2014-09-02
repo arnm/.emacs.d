@@ -10,7 +10,8 @@
   ;; projectile
   "a" 'projectile-find-file
   "p s" 'projectile-switch-project
-  "p c" 'projectile-run-shell-command-in-root
+  "p c" 'projectile-kill-buffers
+  "p b" 'projectile-switch-to-buffer
 
   ;; expand-region
   "r" 'er/expand-region
@@ -29,7 +30,7 @@
   "v" 'split-window-horizontally
   "w" 'save-buffer)
 
-;; ESC == Quit
+;; esc == Quit
 (define-key minibuffer-local-map [escape] 'abort-recursive-edit)
 (define-key minibuffer-local-ns-map [escape] 'abort-recursive-edit)
 (define-key minibuffer-local-completion-map [escape] 'abort-recursive-edit)

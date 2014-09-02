@@ -15,6 +15,7 @@
 (setq ring-bell-function 'ignore)
 
 ;(color-theme-tomorrow)
+;(color-theme-tomorrow-night)
 ;(color-theme-tomorrow-night-bright)
 (color-theme-tomorrow-night-eighties)
 
@@ -27,4 +28,4 @@
 (global-hl-line-mode 1)
 (powerline-center-evil-theme)
 
-(provide 'appearance)
+(provide 'setup-apperance)

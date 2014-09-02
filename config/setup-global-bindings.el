@@ -1,4 +1,4 @@
 (define-key global-map (kbd "RET") 'newline-and-indent)
 
-(provide 'global-key-maps)
+(provide 'setup-global-bindings)
 
