@@ -46,6 +46,7 @@
    ;;jedi
    js2-mode
    js2-refactor
+   jsx-mode
    key-chord
    magit
    markdown-mode
@@ -83,6 +84,7 @@
 (add-hook 'prog-mode-hook 'rainbow-delimiters-mode)
 
 (require 'setup-js2-mode)
+(require 'setup-jsx-mode)
 (require 'setup-emmet-mode)
 (require 'setup-clojure-mode)
 ;; (require 'setup-rust-mode)

@@ -4,7 +4,8 @@
 (add-to-list 'load-path (expand-file-name "tern/emacs" vendor))
 (autoload 'tern-mode "tern.el" nil t)
 (autoload 'js2-mode "js2" nil t)
-(add-to-list 'auto-mode-alist '("\\.js$" . js2-mode))
+
+(add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
 
 (add-hook 'js2-mode-hook (lambda () (tern-mode t)))
 
