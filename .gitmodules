@@ -1,6 +1,6 @@
+[submodule "vendor/evil-org-mode"]
+	path = vendor/evil-org-mode
+	url = https://github.com/arnm/evil-org-mode.git
 [submodule "vendor/tern"]
-    path = vendor/tern
-    url = https://github.com/arnm/tern.git
-[submodule "vendor/evil-org"]
-    path = vendor/evil-org
-    url = https://github.com/edwtjo/evil-org-mode
+	path = vendor/tern
+	url = https://github.com/marijnh/tern.git
