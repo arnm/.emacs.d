@@ -17,7 +17,8 @@
 ;(color-theme-tomorrow)
 ;(color-theme-tomorrow-night)
 ;(color-theme-tomorrow-night-bright)
-(color-theme-tomorrow-night-eighties)
+;(color-theme-tomorrow-night-eighties)
+(load-theme 'ujelly)
 
 ;; minor mode for global fill column
 (define-globalized-minor-mode global-fci-mode

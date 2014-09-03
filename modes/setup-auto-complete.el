@@ -1,9 +1,10 @@
 (require 'auto-complete-config)
 
-(global-auto-complete-mode t)
-
-(setq ac-delay 0.0)
-(setq ac-quick-help-delay 0.5)
+(setq ac-auto-show-menu t)
+(setq ac-auto-start t)
+(setq ac-quick-help-delay 0.3)
+(setq ac-quick-help-height 30)
+(setq ac-show-menu-immediately-on-auto-complete t)
 
 ;; setup and turn on `auto-complete-mode` for various major modes
 (ac-config-default)

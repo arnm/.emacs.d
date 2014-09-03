@@ -59,12 +59,12 @@
    rainbow-delimiters
    ;;rust-mode
    smex
+   ujelly-theme
    yaml-mode
    yasnippet))
 
 (require 'setup-custom)
 (require 'setup-apperance)
-(require 'setup-global-bindings)
 
 ;; System setup
 (require 'setup-yasnippet)
@@ -77,12 +77,12 @@
 (require 'setup-magit)
 (require 'setup-multiple-cursors)
 (require 'setup-nyan-mode)
+(require 'setup-org-mode)
 (require 'setup-paredit)
 (require 'setup-projectile)
 
 ;; Language specific setups
-(add-hook 'prog-mode-hook 'rainbow-delimiters-mode)
-
+(require 'setup-prog-mode)
 (require 'setup-js2-mode)
 (require 'setup-jsx-mode)
 (require 'setup-emmet-mode)
