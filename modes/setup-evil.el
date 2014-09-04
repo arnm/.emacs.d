@@ -1,11 +1,20 @@
+;; make sure TAB works in terminal
+(setq evil-want-C-i-jump nil)
+
 (require 'evil)
 (require 'evil-leader)
 (require 'key-chord)
 (require 'rxvt)
 
-(evil-leader/set-leader ",")
+(global-evil-leader-mode)
+(evil-mode 1)
 
-;; <leader> bindings
+(key-chord-mode 1)
+(setq key-chord-two-keys-delay 0.1)
+
+(add-to-list 'evil-emacs-state-modes 'magit-mode)
+
+(evil-leader/set-leader ",")
 (evil-leader/set-key
   ;; projectile
   "a" 'projectile-find-file
@@ -13,11 +22,14 @@
   "p c" 'projectile-kill-buffers
   "p b" 'projectile-switch-to-buffer
 
+  "j c" 'evil-ace-jump-char-mode
+  "j w" 'evil-ace-jump-word-mode
+  "j l" 'evil-ace-jump-line-mode
+
   ;; expand-region
   "r" 'er/expand-region
 
   ;; global
-  "f" 'evil-ace-jump-word-mode
   "b" 'switch-to-buffer
   "c" 'kill-this-buffer
   "d" 'delete-window
@@ -29,13 +41,6 @@
   "s" 'split-window-vertically
   "v" 'split-window-horizontally
   "w" 'save-buffer)
-
-;; esc == Quit
-(define-key minibuffer-local-map [escape] 'abort-recursive-edit)
-(define-key minibuffer-local-ns-map [escape] 'abort-recursive-edit)
-(define-key minibuffer-local-completion-map [escape] 'abort-recursive-edit)
-(define-key minibuffer-local-must-match-map [escape] 'abort-recursive-edit)
-(define-key minibuffer-local-isearch-map [escape] 'abort-recursive-edit)
 
 (define-key evil-motion-state-map ";" 'evil-forward-char)
 (define-key evil-motion-state-map "j" 'evil-backward-char)
@@ -74,11 +79,5 @@
 
 ;;; Visual State
 (define-key evil-visual-state-map (kbd "C-c") 'evil-normal-state)
-
-(setq key-chord-two-keys-delay 0.1)
-
-(global-evil-leader-mode)
-(evil-mode 1)
-(key-chord-mode 1)
 
 (provide 'setup-evil)

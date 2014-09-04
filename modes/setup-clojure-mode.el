@@ -16,8 +16,8 @@ activated as if nothing happened."
   (message ""))
 
 (evil-leader/set-key-for-mode 'clojure-mode
-  "l j" 'cider-jack-in
-  "l e" 'cider-send-and-evaluate-sexp)
+  "g j" 'cider-jack-in
+  "g e" 'cider-send-and-evaluate-sexp)
 
 (defconst clojure--prettify-symbols-alist
   '(("fn"  . ?λ)

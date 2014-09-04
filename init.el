@@ -24,44 +24,52 @@
 
 (require 'setup-package)
 
-;; Install packages if they're missing
-(packages-install
- '(ace-jump-mode
-   auto-complete
-   autopair
-   cider
-   clojure-mode
-   ;;coffee-mode
-   ;;company-go
-   emmet-mode
-   evil
-   evil-leader
-   expand-region
-   fill-column-indicator
-   fish-mode
-   flx-ido
-   ;;flycheck
-   git-gutter
-   ;;go-mode
-   ;;jedi
-   js2-mode
-   js2-refactor
-   jsx-mode
-   key-chord
-   magit
-   markdown-mode
-   multiple-cursors
-   nyan-mode
-   paredit
-   powerline
-   projectile
-   ;;python-environment
-   rainbow-delimiters
-   ;;rust-mode
-   smex
-   ujelly-theme
-   yaml-mode
-   yasnippet))
+;; install packages if they're missing
+(defun setup-packages ()
+  (packages-install
+   '(ace-jump-mode
+     auto-complete
+     autopair
+     cider
+     clojure-mode
+     ;;coffee-mode
+     ;;company-go
+     emmet-mode
+     evil
+     evil-leader
+     expand-region
+     fill-column-indicator
+     fish-mode
+     flx-ido
+     ;;flycheck
+     git-gutter
+     ;;go-mode
+     ;;jedi
+     js2-mode
+     js2-refactor
+     jsx-mode
+     key-chord
+     magit
+     markdown-mode
+     multiple-cursors
+     nyan-mode
+     paredit
+     powerline
+     projectile
+     ;;python-environment
+     rainbow-delimiters
+     ;;rust-mode
+     smex
+     ujelly-theme
+     yaml-mode
+     yasnippet)))
+
+;; handles any installation errors
+(condition-case nil
+    (setup-packages)
+  (error
+   (package-refresh-contents)
+   (setup-packages)))
 
 (require 'setup-custom)
 (require 'setup-apperance)

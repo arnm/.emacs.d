@@ -1,8 +1,8 @@
 (require 'multiple-cursors)
 
-(global-set-key (kbd "C-\-") 'mc/mark-previous-like-this)
-(global-set-key (kbd "C-\=") 'mc/mark-next-like-this)
-(global-set-key (kbd "C-0") 'mc/mark-next-like-this)
+(define-key evil-visual-state-map (kbd "C-p") 'mc/mark-previous-like-this)
+(define-key evil-visual-state-map (kbd "C-n") 'mc/mark-next-like-this)
+(define-key evil-visual-state-map (kbd "C-a") 'mc/mark-all-like-this)
 
 (setq mc/cmds-to-run-for-all
       '(evil-append-line
