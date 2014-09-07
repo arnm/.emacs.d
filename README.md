@@ -8,3 +8,9 @@ The setup is simple and automatic.
 
 1. Install: `curl https://raw.githubusercontent.com/arnm/emacs.d/master/install | sh`
 2. Run emacs!
+
+You might run into some errors during emacs initial boot up... just close and start emacs until there are no more installation errors. 
+
+## Disclaimer
+
+This configuration is very much tailored to my workflow so go forth with caution.
