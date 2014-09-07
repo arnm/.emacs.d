@@ -6,5 +6,5 @@ I was originally a Vim user before switching to Emacs. I still use Vim on and of
 
 The setup is simple and automatic.
 
-1. Use the install script: `curl https://raw.githubusercontent.com/arnm/emacs.d/master/install | sh`
+1. Install: `curl https://raw.githubusercontent.com/arnm/emacs.d/master/install | sh`
 2. Run emacs!
