@@ -1,10 +1,10 @@
-;; path init
 (setq exec-path
       (append (split-string-and-unquote (getenv "PATH") " ")
 	      exec-path))
 
-(setq custom (concat user-emacs-directory "custom.el"))
-(load custom)
+(setq custom-file (concat user-emacs-directory "custom.el" ))
+(when (file-exists-p custom-file)
+  (load custom-file))
 
 (setq vendor (concat user-emacs-directory "vendor"))
 (add-to-list 'load-path (concat user-emacs-directory "config"))
@@ -19,34 +19,48 @@
 (setq backup-inhibited t)
 (setq auto-save-default nil)
 
-(require 'init-util)
-(require 'init-package)
+(defgroup dotemacs nil
+  "Custom configuration for dotemacs."
+  :group 'local)
 
-(require 'init-custom)
-(require 'init-apperance)
+(defcustom dotemacs-cache-directory (concat user-emacs-directory ".cache/")
+  "The storage location for various persistent files."
+  :group 'dotemacs)
 
-(require 'init-yasnippet)
-;; (require 'init-auto-complete)
-(require 'init-autopair)
-(require 'init-company)
-(require 'init-evil)
-(require 'init-bindings)
-(require 'init-expand-region)
-(require 'init-flx-ido)
-(require 'init-git-gutter)
-(require 'init-magit)
-(require 'init-multiple-cursors)
-;; (require 'init-nyan-mode)
-(require 'init-org-mode)
-(require 'init-paredit)
-(require 'init-projectile)
+(defcustom dotemacs-modules
+  '(init-util
+    init-package
+    init-apperance
 
-;; Language specific inits
-(require 'init-prog-mode)
-;; (require 'init-js2-mode)
-;; (require 'init-jsx-mode)
-(require 'init-emmet-mode)
-(require 'init-clojure-mode)
-(require 'init-rust-mode)
-;; (require 'init-go-mode)
-(require 'init-eldoc)
+    init-yasnippet
+    ;; init-auto-complete
+    init-company
+
+    init-evil
+    init-bindings
+
+    init-autopair
+    init-expand-region
+    init-multiple-cursors
+    init-paredit
+
+    init-flx-ido
+    init-git-gutter
+    ;; init-nyan-mode
+
+    init-magit
+    init-projectile
+
+    init-prog-mode
+    init-org-mode
+    init-clojure-mode
+    init-eldoc
+    init-emmet-mode
+    init-js2-mode
+    ;; init-jsx-mode
+    init-rust-mode)
+  "List of modules enabled in dotemacs."
+  :group 'dotemacs)
+
+(dolist (module dotemacs-modules)
+  (require module))

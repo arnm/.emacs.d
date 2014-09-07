@@ -11,4 +11,9 @@
 (require-package 'ido-vertical-mode)
 (ido-vertical-mode)
 
+(require-package 'smex)
+(require 'smex)
+
+(smex-initialize)
+
 (provide 'init-flx-ido)

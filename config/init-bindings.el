@@ -14,7 +14,6 @@
       "b" 'switch-to-buffer
       "c" 'kill-this-buffer
       "d" 'delete-window
-      "e" 'smex
       "k" 'kill-buffer
       "n" 'write-file
       "o" 'find-file
@@ -22,6 +21,10 @@
       "s" 'split-window-vertically
       "v" 'split-window-horizontally
       "w" 'save-buffer)
+
+    (after "smex-autoloads"
+      (evil-leader/set-key
+	"e" 'smex))
 
     (after "projectile-autoloads"
       (evil-leader/set-key
@@ -44,6 +47,11 @@
     (define-key evil-visual-state-map (kbd "C-a") 'mc/mark-all-like-this)
     (define-key evil-visual-state-map (kbd "C-n") 'mc/mark-next-like-this)
     (define-key evil-visual-state-map (kbd "C-p") 'mc/mark-previous-like-this))
+
+  (after "cider-autoloads"
+    (evil-leader/set-key-for-mode 'clojure-mode
+      "g j" 'cider-jack-in
+      "g e" 'cider-send-and-evaluate-sexp))
 
   (define-key evil-motion-state-map ";" 'evil-forward-char)
   (define-key evil-motion-state-map "j" 'evil-backward-char)

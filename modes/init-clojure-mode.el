@@ -1,7 +1,11 @@
 (require-package 'clojure-mode)
 (require 'clojure-mode)
 
-(defun my-cider ()
+(after 'clojure-mode
+  (setq cider-repl-use-clojure-font-lock t)
+  (setq nrepl-hide-special-buffers t)
+  (setq cider-popup-stacktraces nil)
+
   (require-package 'cider)
   (require 'cider)
 
@@ -17,17 +21,7 @@ activated as if nothing happened."
     (cider-switch-to-repl-buffer)
     (cider-repl-closing-return)
     (cider-switch-to-last-clojure-buffer)
-    (message ""))
-
-  (evil-leader/set-key-for-mode 'clojure-mode
-    "g j" 'cider-jack-in
-    "g e" 'cider-send-and-evaluate-sexp)
-
-  (setq cider-repl-use-clojure-font-lock t)
-  (setq nrepl-hide-special-buffers t)
-  (setq cider-popup-stacktraces nil))
-
-(add-hook 'clojure-mode-hook 'my-cider)
+    (message "")))
 
 (provide 'init-clojure-mode)
 

@@ -1,10 +1,9 @@
 #!/bin/sh
 
-echo "Setting up Tern"
-cd ~/.emacs.d/vendor/tern
-npm install
+echo "Cloning repo"
+git clone --recursive https://github.com/arnm/emacs.d ~/.emacs.d
 
-echo "Download default custom.el"
+echo "Downloading default custom.el"
 cd ~/.emacs.d/
 wget https://gist.githubusercontent.com/arnm/11359580/raw/00d81bde6480835a0cdab9301783b81f7123581e/custom.el
 
