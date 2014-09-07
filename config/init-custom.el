@@ -8,4 +8,4 @@
 
 (add-hook 'before-save-hook 'make-dir-path)
 
-(provide 'setup-custom)
+(provide 'init-custom)

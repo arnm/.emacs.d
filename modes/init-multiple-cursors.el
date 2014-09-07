@@ -1,8 +1,5 @@
+(require-package 'multiple-cursors)
 (require 'multiple-cursors)
-
-(define-key evil-visual-state-map (kbd "C-p") 'mc/mark-previous-like-this)
-(define-key evil-visual-state-map (kbd "C-n") 'mc/mark-next-like-this)
-(define-key evil-visual-state-map (kbd "C-a") 'mc/mark-all-like-this)
 
 (setq mc/cmds-to-run-for-all
       '(evil-append-line
@@ -29,4 +26,4 @@
 	evil-change))
 
 (multiple-cursors-mode t)
-(provide 'setup-multiple-cursors)
+(provide 'init-multiple-cursors)

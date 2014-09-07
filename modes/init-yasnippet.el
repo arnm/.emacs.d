@@ -1,3 +1,4 @@
+(require-package 'yasnippet)
 (require 'yasnippet)
 
 (add-hook 'prog-mode-hook 'yas-minor-mode)
@@ -11,4 +12,4 @@
 
 (yas-reload-all)
 
-(provide 'setup-yasnippet)
+(provide 'init-yasnippet)

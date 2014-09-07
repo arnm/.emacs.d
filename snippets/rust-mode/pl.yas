@@ -1,5 +1,5 @@
 # -*- mode: snippet -*-
 # name: println
-# key: plm
+# key: pl
 # --
 println!("$1", $2);$0

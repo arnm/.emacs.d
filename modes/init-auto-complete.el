@@ -1,3 +1,5 @@
+(require-package 'auto-complete)
+(require 'auto-complete)
 (require 'auto-complete-config)
 
 (setq ac-auto-show-menu t)
@@ -9,10 +11,12 @@
 ;; setup and turn on `auto-complete-mode` for various major modes
 (ac-config-default)
 
+(add-to-list 'ac-modes 'rust-mode)
+
 ;; resetting ac-sources
 (setq-default ac-sources '(ac-source-yasnippet
                            ac-source-abbrev
                            ac-source-dictionary
                            ac-source-words-in-same-mode-buffers))
 
-(provide 'setup-auto-complete)
+(provide 'init-auto-complete)
