@@ -23,7 +23,8 @@
   "Custom configuration for dotemacs."
   :group 'local)
 
-(defcustom dotemacs-cache-directory (concat user-emacs-directory ".cache/")
+(defcustom dotemacs-cache-directory
+  (concat user-emacs-directory ".cache/")
   "The storage location for various persistent files."
   :group 'dotemacs)
 
@@ -36,6 +37,7 @@
     ;; init-auto-complete
     init-company
 
+    init-ace-jump-mode
     init-evil
     init-bindings
 

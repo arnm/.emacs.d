@@ -3,55 +3,59 @@
   (require 'rxvt)
   (require-package 'key-chord)
 
+  (setq key-chord-two-keys-delay 0.1)
   (key-chord-mode 1)
   (key-chord-define evil-insert-state-map "jk" 'evil-normal-state)
   (key-chord-define evil-insert-state-map "kj" 'evil-normal-state)
-  (setq key-chord-two-keys-delay 0.1)
 
   (after "evil-leader-autoloads"
     (evil-leader/set-leader ",")
     (evil-leader/set-key
       "b" 'switch-to-buffer
-      "c" 'kill-this-buffer
+      "k" 'kill-this-buffer
       "d" 'delete-window
-      "k" 'kill-buffer
-      "n" 'write-file
-      "o" 'find-file
+      "w" 'save-buffer
       "q" 'save-buffers-kill-terminal
       "s" 'split-window-vertically
-      "v" 'split-window-horizontally
-      "w" 'save-buffer)
+      "v" 'split-window-horizontally)
 
-    (after "smex-autoloads"
-      (evil-leader/set-key
-	"e" 'smex))
-
-    (after "projectile-autoloads"
-      (evil-leader/set-key
-	"a" 'projectile-find-file
-	"p s" 'projectile-switch-project
-	"p c" 'projectile-kill-buffers
-	"p b" 'projectile-switch-to-buffer))
+    (after "ace-jump-mode-autoloads"
+      (define-key evil-normal-state-map (kbd "w") 'evil-ace-jump-word-mode)
+      (define-key evil-normal-state-map (kbd "b") 'evil-ace-jump-word-mode)
+      (define-key evil-motion-state-map (kbd "SPC") 'evil-ace-jump-line-mode)
+      (define-key evil-motion-state-map (kbd "f") 'evil-ace-jump-char-mode)
+      (define-key evil-motion-state-map (kbd "t") 'evil-ace-jump-char-to-mode))
 
     (after "expand-region-autoloads"
       (evil-leader/set-key
 	"r" 'er/expand-region))
 
-    (after "ace-jump-mode-autoloads"
+    (after "magit-autoloads"
       (evil-leader/set-key
-	"j c" 'evil-ace-jump-char-mode
-	"j w" 'evil-ace-jump-word-mode
-	"j l" 'evil-ace-jump-line-mode)))
+	"g s" 'magit-status
+	"g l" 'magit-log))  
 
-  (after "multiple-cursors-autoloads"
-    (define-key evil-visual-state-map (kbd "C-a") 'mc/mark-all-like-this)
-    (define-key evil-visual-state-map (kbd "C-n") 'mc/mark-next-like-this)
-    (define-key evil-visual-state-map (kbd "C-p") 'mc/mark-previous-like-this))
+    (after "multiple-cursors-autoloads"
+      (define-key evil-visual-state-map (kbd "C-a") 'mc/mark-all-like-this)
+      (define-key evil-visual-state-map (kbd "C-n") 'mc/mark-next-like-this)
+      (define-key evil-visual-state-map (kbd "C-p") 'mc/mark-previous-like-this))
 
-  (after "cider-autoloads"
-    (evil-leader/set-key-for-mode 'clojure-mode
-      "g j" 'cider-jack-in
-      "g e" 'cider-send-and-evaluate-sexp))
+    (after "projectile-autoloads"
+      (evil-leader/set-key
+	"a" 'arnm/open-file
+	"p s" 'projectile-switch-project
+	"p c" 'projectile-kill-buffers
+	"p b" 'projectile-switch-to-buffer))
+
+    (after "smex-autoloads"
+      (global-set-key (kbd "M-x") 'smex)
+      (evil-leader/set-key
+	"e" 'smex))
+
+    (after "cider-autoloads"
+      (evil-leader/set-key-for-mode 'clojure-mode
+	"f j" 'cider-jack-in
+	"f e" 'cider-send-and-evaluate-sexp)))
 
   (define-key evil-motion-state-map ";" 'evil-forward-char)
   (define-key evil-motion-state-map "j" 'evil-backward-char)
