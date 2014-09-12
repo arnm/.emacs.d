@@ -6,14 +6,12 @@
 (setq company-show-numbers t)
 (setq company-tooltip-limit 20)
 (setq company-dabbrev-downcase nil)
-(setq company-dabbrev-ignore-case nil)
+(setq company-dabbrev-ignore-case t)
 
-(add-to-list 'company-backends 'company-yasnippet)
-(add-to-list 'company-backends 'company-dabbrev-code)
-
-(when (executable-find "tern")
-  (after "company-tern-autoloads"
-    (add-to-list 'company-backends 'company-tern)))
+(add-hook 'prog-mode-hook
+	  (lambda ()
+	    (set (make-local-variable 'company-backends)
+		 (list (list 'company-dabbrev-code 'company-yasnippet)))))
 
 (setq company-global-modes
       '(not eshell-mode comint-mode org-mode))

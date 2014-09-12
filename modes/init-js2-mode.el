@@ -1,14 +1,10 @@
-(require-package 'js2-mode)
+(arnm/lazy-major-mode "\\.js$" js2-mode)
 
 (after 'js2-mode
-  (when (executable-find "tern")
-    (require-package 'tern)
-    (add-hook 'js2-mode-hook 'tern-mode)
-    (after 'tern
-      (after 'auto-complete
-	(require-package 'tern-auto-complete)
-	(tern-ac-setup))
-      (after 'company-mode
-	(require-package 'company-tern)))))
+  (require-package 'tern)
+  (add-hook 'js2-mode-hook 'tern-mode)
+  (after 'tern
+    (require-package 'company-tern)
+    (add-to-list 'company-backends 'company-tern)))
 
 (provide 'init-js2-mode)

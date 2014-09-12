@@ -31,6 +31,7 @@
   (linum-mode 1))
 
 (defun arnm/disable-evil-mode ()
+  ;; (turn-off-evil-mode)
   (linum-mode -1)
   (set-cursor-color "red"))
 

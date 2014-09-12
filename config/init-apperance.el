@@ -2,14 +2,14 @@
 (show-paren-mode)
 (global-hl-line-mode 1)
 
-(require-package 'diminish)
-(after 'autopair (diminish 'autopair-mode))
-(after 'company (diminish 'company-mode))
-(after 'eldoc (diminish 'eldoc-mode))
-(after 'git-gutter (diminish 'git-gutter-mode))
-(after 'paredit (diminish 'paredit-mode))
-(after 'undo-tree (diminish 'undo-tree-mode))
-(after 'yasnippet (diminish 'yas-minor-mode))
+;; (require-package 'diminish)
+;; (after 'autopair (diminish 'autopair-mode))
+;; (after 'company (diminish 'company-mode))
+;; (after 'eldoc (diminish 'eldoc-mode))
+;; (after 'git-gutter (diminish 'git-gutter-mode))
+;; (after 'paredit (diminish 'paredit-mode))
+;; (after 'undo-tree (diminish 'undo-tree-mode))
+;; (after 'yasnippet (diminish 'yas-minor-mode))
 
 ;; empty scratch buffer on start up
 (setf inhibit-splash-screen t)
@@ -20,7 +20,7 @@
 (setq ring-bell-function 'ignore)
 
 (require 'color-theme-tomorrow)
-;(color-theme-tomorrow)
+;; (color-theme-tomorrow)
 ;(color-theme-tomorrow-night)
 ;(color-theme-tomorrow-night-bright)
 ;(color-theme-tomorrow-night-eighties)
