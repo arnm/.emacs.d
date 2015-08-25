@@ -50,15 +50,15 @@
 
 (defconst default-background (face-background 'mode-line))
 (defconst default-foreground (face-foreground 'mode-line))
+(defconst default-color (cons default-background default-foreground))
 
 (defun arnm/evil/modeline ()
   "Change modeline color depending on Evil's current mode."
-  (let ((color (cond
-                 ((evil-normal-state-p) '("#002200" . "#ffffff"))
-                 ((evil-insert-state-p) '("#002233" . "#ffffff"))
-                 ((evil-visual-state-p) '("#2E2200" . "#ffffff"))
-                 ;; not in evil mode
-                 (t '("#440000" . "#ffffff")))))
+  (let ((color (if (or (evil-normal-state-p)
+                       (evil-insert-state-p)
+                       (evil-visual-state-p))
+                 default-color
+                 '("#440000" . "#ffffff"))))
     (set-face-background 'mode-line (car color))
     (set-face-foreground 'mode-line (cdr color))))
 
