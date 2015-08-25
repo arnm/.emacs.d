@@ -9,7 +9,7 @@
 (line-number-mode t)
 (setq inhibit-splash-screen t)
 
-(arnm/package/require 'base16-theme)
+(arnm/package/install 'base16-theme)
 (load-theme 'base16-ocean-dark)
 
 (provide 'arnm-theme)

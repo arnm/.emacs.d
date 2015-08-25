@@ -6,7 +6,7 @@
 (setq package-enable-at-startup nil)
 (package-initialize)
 
-(defun arnm/package/require (package)
+(defun arnm/package/install (package)
   "Ensures a package is installed."
   (unless (or (package-installed-p package)
               (require package nil 'noerror))

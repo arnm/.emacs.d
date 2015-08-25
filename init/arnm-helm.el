@@ -15,7 +15,10 @@
 (setq helm-input-idle-delay 0.02)
 (setq helm-candidate-number-limit 10)
 
-(arnm/package/require 'helm)
+(arnm/package/install 'helm)
+
+(arnm/util/after "projectile-autoloads"
+  (arnm/package/install 'helm-projectile))
 
 (arnm/util/after 'helm
   (setq helm-autoresize-min-height 20)
